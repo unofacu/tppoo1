@@ -1,0 +1,61 @@
+5451: CHOCOLATE                :12.95 
+5475: VAINILLA                 :10.10 
+0494: EXTREMO                  :7.72  
+7923: DE-GALLINA               :5.36  
+8142: DE-CARNE                 :5.36  
+8432: DE-VERDURA               :5.36  
+0272: GUISEROS                 :5.18  
+0272: SOPEROS                  :5.18  
+0517: TALLARINES               :5.49  
+0078: LARGOS-AL-HUEVO          :5.79  
+0283: MOÑOS                    :4.73  
+0276: ROSCAS                   :4.94  
+1140: ROSCAS-A-LA-ESPINACA     :6.10  
+0085: ROSCAS-AL-HUEVO          :6.10  
+0931: SOPEROS-GUISEROS-LARGO   :4.57  
+4949: TIRABUZÓN                :8.42  
+4963: CODITOS                  :8.42  
+4956: MOSTACHOLES              :8.42  
+5021: AVE-MARIA                :8.42  
+4925: SPAGHETTI                :8.42  
+7674: TALLARÍN                 :7.08  
+0153: GUISEROS                 :6.20  
+0160: LARGOS                   :6.20  
+0177: SOPEROS                  :6.20 
+7307: CLASICAS                 :5.39  :10
+3901: CRACKER                  :3.19  :10
+0335: BIZCOCHOS-DULCES         :6.28  :10
+2166: MANZANA-Y-CANELA         :8.26  :10
+0106: TALITAS                  :9.12  :10
+4876: ORIGINAL-AGRUPADO        :24.35 :10
+4211: RAPIDA                   :3.58  :10
+7196: POLENTA                  :5.43  :10
+9088: RECETA-LIVIANA           :7.89  :10
+6308: LIGHT-FRUTILLA           :16.97 :10
+6710: BL-WHEAT-VAN-W-IRON      :50.00 :10
+4266: EN-TETRABRICK            :3.17  :10
+4259: EN-TETRABRICK            :3.67  :10
+4765: PLUS-PARA-FREIR          :12.68 
+6949: PAQUETE                  :6.00  :10
+0099: PAQUETE                  :5.55  :10
+5904: POMAROLA-DOY-PACK        :8.15  :10
+4297: PELADO-ENTERO-EN-LATA    :4.42  :10
+0034: DE-ALCOHOL               :6.61  :10
+8360: SABORIZADA               :7.23  :10
+0310: LIMONADA                 :9.23  :10
+1370: MANZANA                  :7.23  :10
+3350: MANZANA                  :9.23  :10
+7370: NARANJA                  :7.23  :10
+3380: NARANJA                  :9.23  :10
+1647: C/VIT-S/GAS-MANZANA      :9.99  :10
+1661: C/VIT-S/GAS-PERA         :9.99  :10
+1579: C/VIT-S/GAS-POMELO       :9.99  :10
+1252: MINERAL-NATURAL          :19.20 :10
+0033: MINERAL-NATURAL          :7.50  :10
+3062: BLANCO-PET               :12.19 :10
+2768: AMERICANO                :17.42 :10
+1976: COLA                     :11.66 :10
+1365: LIMA-LIMÓN               :11.66 :10
+7880: NATURAL-NARANJA          :8.62  :10
+0238: ANANA                    :0.85  :10
+0245: DURAZNO                  :0.85  

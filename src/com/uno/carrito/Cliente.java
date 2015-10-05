@@ -110,6 +110,4 @@ public class Cliente {
 		System.out.printf("Total a pagar: %f\n", this.getTotalAPagar());
 	}
 	
-	
-	
 }
