@@ -21,6 +21,47 @@ public class Cliente {
 		
 	}
 
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+	public String getDireccionEnvio() {
+		return direccionEnvio;
+	}
+
+
+	public void setDireccionEnvio(String direccionEnvio) {
+		this.direccionEnvio = direccionEnvio;
+	}
+
+
+	public String getDireccionCobro() {
+		return direccionCobro;
+	}
+
+
+	public void setDireccionCobro(String direccionCobro) {
+		this.direccionCobro = direccionCobro;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
 	public void agregarCarrito (Carrito carrito) {
 		this.carritos.add(carrito);
 	}
@@ -53,15 +94,22 @@ public class Cliente {
 	public void comprar() {
 		
 		float total = this.getTotalCompra();
-		
 		System.out.printf("Datos Cliente:\n%s\n%s\n%s\n%s\n", nombre, direccionCobro, direccionEnvio, email);
-		System.out.printf("Total de la compra : %f\n", total);
 		
 	}
 	
+	public float getTotalAPagar(){
+		return this.getTotalCompra();
+		
+	}
+		
 	public void mostrarDetalle() {
 		for(Carrito carrito : this.carritos)
 			carrito.mostrarDetalle();
+				
+		System.out.printf("Total a pagar: %f\n", this.getTotalAPagar());
 	}
+	
+	
 	
 }
