@@ -8,13 +8,19 @@ public class Main {
 	public static void main(String[] args) {
 
 		ProductosAComprar lista = new ProductosAComprar("listaproductos.txt");
-			
-//		Carrito carrito1 = new Carrito();
+		String nombre = "NULL";
+		String dirdeenvio = "NULL";
+		String dirdecobro = "NULL";
+		String mail = "NULL";
+		String dec = "NULL";
+		int descuento = 0;
+		
+Carrito carrito1 = new Carrito();
 //		Carrito carrito2 = new Carrito();
 //		Carrito carrito3 = new Carrito();
 //		
 //		Cliente cliente = new Cliente("Carlos Perez", "Rivadavia 620", "Rivadavia 620", "carlos@mail.com");
-//		ClientePreferencial cliente2 = new ClientePreferencial("Carlos Perez", "Rivadavia 620", "Rivadavia 620", "carlos@mail.com", 20);
+//		ClientePreferencial cliente = new ClientePreferencial("Carlos Perez", "Rivadavia 620", "Rivadavia 620", "carlos@mail.com", 20);
 //		
 //		cliente.agregarCarrito(carrito1);
 //		cliente.agregarCarrito(carrito2);
@@ -41,8 +47,9 @@ public class Main {
 		Cliente cliente = null;
 		int carritoActual = 0;
 		Scanner keyboard = new Scanner(System.in);
-		String linea = "";
-		while (!(linea.equals("7") || linea.equals("8"))) {
+		int linea = 0;
+		int contcarrito = 1;
+		while (!(linea == 7) || ( linea == 8)) {
 			
 			System.out.println("1.-Ingresar cliente");
 			System.out.println("2.-Agregar Carrito al cliente.");
@@ -54,12 +61,46 @@ public class Main {
 			System.out.println("8.-Salir");
 			System.out.println("");
 			System.out.print("Ingrese una opcion: ");
-			linea = keyboard.next();
+			linea = keyboard.nextInt();
 			
+			
+			switch (linea) {
+            case 1:
+            	System.out.println("Ingrse el nomrbre del cliente: ");
+            	nombre = keyboard.next();
+            	System.out.println("Ingrese la direccion de Envio: ");
+            	dirdeenvio = keyboard.next();
+            	System.out.println("Ingrese la direccion de Cobro: ");
+            	dirdecobro = keyboard.next();
+            	System.out.println("Ingrese el mail del cliente: ");
+            	mail = keyboard.next();
+            	System.out.println("Tiene algun descuento? (S/N): ");
+            	dec = keyboard.next();
+            	 			
+            				if ((dec.equals("S")) || (dec.equals("s"))){
+            					System.out.print("Ingrese el procentaje de descuento: ");
+            					descuento = keyboard.nextInt();
+            					cliente = new ClientePreferencial(nombre, dirdeenvio, dirdecobro, mail, descuento);
+            				}
+            				else 
+            					cliente = new Cliente (nombre, dirdeenvio, dirdecobro, mail);
+            case 2:
+            		cliente.agregarCarrito(carrito1);
+            	
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:	
+            default:
+                System.out.println("Opcion invalida");
+                break;
 			
 		}
 		
 	}
+}}
 	
 	// Metodo para pedir datos del cliente por pantalla y con los mismos crear una instancia de Cliente, si se ingresa un porcentaje de 
 	// descuento la instancia se hara con la clase ClientePreferencial. Esta opcion solo permitira cargar los datos del cliente si el objeto cliente == null
@@ -76,4 +117,4 @@ public class Main {
 	
 	
 	
-}
+
