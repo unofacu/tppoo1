@@ -62,5 +62,20 @@ public class ProductosAComprar {
 		}
 
 	}
+	
+	public Producto getProducto(int id) {
+		
+		boolean encontre = false;
+		Producto producto = null;
+		
+		for (int i = 0; i < this.listaProductos.size() && !encontre; i++)
+			if (this.listaProductos.get(i).getId() == id) {
+				producto = this.listaProductos.get(i);
+				encontre = true;
+			}
+		
+		return producto;
+		
+	}
 
 }
