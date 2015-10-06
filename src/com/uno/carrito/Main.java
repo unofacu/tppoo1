@@ -6,6 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		ProductosAComprar lista = new ProductosAComprar("listaproductos.txt");
+		System.out.println("Hola mundo");
 			
 //		Carrito carrito1 = new Carrito();
 //		Carrito carrito2 = new Carrito();
