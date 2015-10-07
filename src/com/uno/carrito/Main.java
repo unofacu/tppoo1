@@ -1,11 +1,11 @@
 package com.uno.carrito;
 
+import java.io.IOException;
 import java.util.Scanner;
-
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		ProductosAComprar lista = new ProductosAComprar("listaproductos.txt");
 		String nombre = "NULL";
@@ -14,8 +14,10 @@ public class Main {
 		String mail = "NULL";
 		String dec = "NULL";
 		int descuento = 0;
+		Carrito carrito;
 		
-Carrito carrito1 = new Carrito();
+		
+		
 //		Carrito carrito2 = new Carrito();
 //		Carrito carrito3 = new Carrito();
 //		
@@ -48,8 +50,8 @@ Carrito carrito1 = new Carrito();
 		int carritoActual = 0;
 		Scanner keyboard = new Scanner(System.in);
 		int linea = 0;
-		int contcarrito = 1;
-		while (!(linea == 7) || ( linea == 8)) {
+				
+		do {
 			
 			System.out.println("1.-Ingresar cliente");
 			System.out.println("2.-Agregar Carrito al cliente.");
@@ -84,22 +86,31 @@ Carrito carrito1 = new Carrito();
             				}
             				else 
             					cliente = new Cliente (nombre, dirdeenvio, dirdecobro, mail);
+            				
+            		break;
             case 2:
-            		cliente.agregarCarrito(carrito1);
-            	
+            		cliente.agregarCarrito(carrito = new Carrito());
+            		System.out.print("Su nuevo Carrito fue creado!!!! presione enter para continuar...");
+            		System.in.read();
+            		
+            		break;
             case 3:
-            case 4:
+            	 	break;
+            case 4: 
+            		break;
             case 5:
+            		break;
             case 6:
+            		break;
             case 7:
-            case 8:	
-            default:
-                System.out.println("Opcion invalida");
-                break;
+            		break;
+            //default:
+              //  System.out.println("Opcion invalida");
+                // break;
 			
 		}
 		
-	}
+	} while ((linea > 0) || ( linea <=7 ));
 }}
 	
 	// Metodo para pedir datos del cliente por pantalla y con los mismos crear una instancia de Cliente, si se ingresa un porcentaje de 
