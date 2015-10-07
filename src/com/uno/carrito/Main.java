@@ -97,12 +97,25 @@ public class Main {
             		cliente.ListarCarritos();
             	 	break;
             case 4: 
+            		System.out.print("Ingrese el carrito a usar: ");
+            		carritoActual = keyboard.nextInt();
             		break;
             case 5:
+            		lista.mostrarListaProductos();
             		break;
             case 6:
+            		System.out.print("Ingrese el ID del producto a comprar: ");
+            		int id = keyboard.nextInt();
+            		System.out.print("Ingrese la cantidad de unidades: ");
+            		int cantidad = keyboard.nextInt();
+            		cliente.getCarrito(carritoActual).agregarProducto(lista.getProducto(id), cantidad);
+            		System.out.printf("Su producto ha sido agregado al carrito Nro: %d\n", carritoActual);
+            		System.out.println(" presione enter para continuar...");
+            		System.in.read();            		
+            		
             		break;
             case 7:
+            		cliente.mostrarDetalle();
             		break;
             case 8:
             		System.out.println("Saliendo del programa!!!");
