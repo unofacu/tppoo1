@@ -11,16 +11,19 @@ public class Cliente {
 	private String direccionCobro;
 	private String email;
 	
-	public Cliente(String nombre, String direccionEnvio, String direccionCobro, String email) {
+	private Tarjeta tarjeta;
+	
+	public Cliente(String nombre, String direccionEnvio, String direccionCobro, String email, Tarjeta tarjeta) {
 		
 		this.nombre = nombre;
 		this.direccionEnvio = direccionEnvio;
 		this.direccionCobro = direccionCobro;
 		this.email = email;
+		this.tarjeta = tarjeta;
 		this.carritos = new ArrayList<Carrito>();
 		this.carritos.add(new Carrito());
-	}
 
+	}
 	
 	public String getNombre() {
 		return nombre;

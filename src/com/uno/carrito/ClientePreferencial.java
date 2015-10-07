@@ -5,8 +5,8 @@ public class ClientePreferencial extends Cliente{
 	
 	private float descuento;	
 
-	public ClientePreferencial(String nombre, String direccionEnvio, String direccionCobro, String email, float descuento) {
-		super(nombre, direccionEnvio, direccionCobro, email);
+	public ClientePreferencial(String nombre, String direccionEnvio, String direccionCobro, String email, Tarjeta tarjeta, float descuento) {
+		super(nombre, direccionEnvio, direccionCobro, email, tarjeta);
 		this.descuento = descuento;
 	}
 

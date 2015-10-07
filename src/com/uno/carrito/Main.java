@@ -1,6 +1,7 @@
 package com.uno.carrito;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -13,9 +14,12 @@ public class Main {
 		String dirdecobro = "NULL";
 		String mail = "NULL";
 		String dec = "NULL";
+		long nroTarjeta = 0;
+		String validoDesde = "";
+		String validoHasta = "";
+		int cvs = 0;
 		int descuento = 0;
 		Carrito carrito;
-		
 		
 		
 //		Carrito carrito2 = new Carrito();
@@ -68,6 +72,7 @@ public class Main {
 			
 			switch (opcion) {
             case 1:
+            	
             	System.out.println("Ingrse el nomrbre del cliente: ");
             	nombre = keyboard.next();
             	System.out.println("Ingrese la direccion de Envio: ");
@@ -76,15 +81,27 @@ public class Main {
             	dirdecobro = keyboard.next();
             	System.out.println("Ingrese el mail del cliente: ");
             	mail = keyboard.next();
+            	
+            	// Solicitar datos de Tarjeta
+            	System.out.print("Ingrese nro. de Tarjeta: ");
+            	nroTarjeta = keyboard.nextLong();
+            	System.out.print("Ingrese valida desde (aaaa-mm-d): ");
+            	validoDesde = keyboard.next();
+            	System.out.print("Ingrese valida hasta (aaaa-mm-d): ");
+            	validoHasta = keyboard.next();
+            	System.out.print("Ingrese codigo de verificacion: ");
+            	cvs = keyboard.nextInt();
+            	
+            	Tarjeta tarjeta = new Tarjeta(nroTarjeta, validoDesde, validoHasta, cvs);
             	System.out.print("Ingrese el procentaje de descuento: ");
             	descuento = keyboard.nextInt();
             	 			
             				if ((descuento > 0) || (descuento <= 50)){
             					
-            					cliente = new ClientePreferencial(nombre, dirdeenvio, dirdecobro, mail, descuento);
+            					cliente = new ClientePreferencial(nombre, dirdeenvio, dirdecobro, mail, tarjeta, descuento);
             				}
             				else 
-            					cliente = new Cliente (nombre, dirdeenvio, dirdecobro, mail);
+            					cliente = new Cliente (nombre, dirdeenvio, dirdecobro, mail, tarjeta);
             				
             		break;
             case 2:
@@ -108,10 +125,17 @@ public class Main {
             		int id = keyboard.nextInt();
             		System.out.print("Ingrese la cantidad de unidades: ");
             		int cantidad = keyboard.nextInt();
-            		cliente.getCarrito(carritoActual).agregarProducto(lista.getProducto(id), cantidad);
-            		System.out.printf("Su producto ha sido agregado al carrito Nro: %d\n", carritoActual);
-            		System.out.println(" presione enter para continuar...");
-            		System.in.read();            		
+            		
+            		Producto producto = lista.getProducto(id);
+            		if (producto == null)
+            			System.out.println("Producto inexistente.");
+            		else {
+            			System.out.printf("Se agregaron %d unidades del producto %d - %s. Total : %7.2f", cantidad, producto.getId(), producto.getNombre(), cantidad * producto.getPrecio());
+	            		cliente.getCarrito(carritoActual).agregarProducto(producto, cantidad);
+	            		System.out.printf("Su producto ha sido agregado al carrito Nro: %d\n", carritoActual);
+	            		System.out.println(" presione enter para continuar...");
+	            		System.in.read();
+}
             		
             		break;
             case 7:
