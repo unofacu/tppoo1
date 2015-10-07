@@ -18,7 +18,7 @@ public class Cliente {
 		this.direccionCobro = direccionCobro;
 		this.email = email;
 		this.carritos = new ArrayList<Carrito>();
-		
+		this.carritos.add(new Carrito());
 	}
 
 	
@@ -108,6 +108,14 @@ public class Cliente {
 			carrito.mostrarDetalle();
 				
 		System.out.printf("Total a pagar: %f\n", this.getTotalAPagar());
+	}
+	
+	public void ListarCarritos (){
+		System.out.printf("\n\n\nUsted dispone de los siguientes carritos:\n\n\n");
+		for (int i = 0; i < this.carritos.size(); i++){
+			System.out.printf("Carrito Nro: %d\n", i); 
+		 }
+		System.out.printf("\n\n\n");
 	}
 	
 }

@@ -49,9 +49,9 @@ public class Main {
 		Cliente cliente = null;
 		int carritoActual = 0;
 		Scanner keyboard = new Scanner(System.in);
-		int linea = 0;
+		int opcion = 0;
 				
-		do {
+		while (!( opcion ==8 )) {
 			
 			System.out.println("1.-Ingresar cliente");
 			System.out.println("2.-Agregar Carrito al cliente.");
@@ -63,10 +63,10 @@ public class Main {
 			System.out.println("8.-Salir");
 			System.out.println("");
 			System.out.print("Ingrese una opcion: ");
-			linea = keyboard.nextInt();
+			opcion = keyboard.nextInt();
 			
 			
-			switch (linea) {
+			switch (opcion) {
             case 1:
             	System.out.println("Ingrse el nomrbre del cliente: ");
             	nombre = keyboard.next();
@@ -76,12 +76,11 @@ public class Main {
             	dirdecobro = keyboard.next();
             	System.out.println("Ingrese el mail del cliente: ");
             	mail = keyboard.next();
-            	System.out.println("Tiene algun descuento? (S/N): ");
-            	dec = keyboard.next();
+            	System.out.print("Ingrese el procentaje de descuento: ");
+            	descuento = keyboard.nextInt();
             	 			
-            				if ((dec.equals("S")) || (dec.equals("s"))){
-            					System.out.print("Ingrese el procentaje de descuento: ");
-            					descuento = keyboard.nextInt();
+            				if ((descuento > 0) || (descuento <= 50)){
+            					
             					cliente = new ClientePreferencial(nombre, dirdeenvio, dirdecobro, mail, descuento);
             				}
             				else 
@@ -89,12 +88,13 @@ public class Main {
             				
             		break;
             case 2:
-            		cliente.agregarCarrito(carrito = new Carrito());
+            		cliente.agregarCarrito(new Carrito());
             		System.out.print("Su nuevo Carrito fue creado!!!! presione enter para continuar...");
             		System.in.read();
             		
             		break;
             case 3:
+            		cliente.ListarCarritos();
             	 	break;
             case 4: 
             		break;
@@ -104,13 +104,16 @@ public class Main {
             		break;
             case 7:
             		break;
-            //default:
-              //  System.out.println("Opcion invalida");
-                // break;
+            case 8:
+            		System.out.println("Saliendo del programa!!!");
+            		break;
+            default:
+            		System.out.printf("Ingrese una opcion valida!!!\n\n\n");
+            		break;
 			
 		}
 		
-	} while ((linea > 0) || ( linea <=7 ));
+	} 
 }}
 	
 	// Metodo para pedir datos del cliente por pantalla y con los mismos crear una instancia de Cliente, si se ingresa un porcentaje de 
