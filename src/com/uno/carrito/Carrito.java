@@ -44,9 +44,10 @@ public class Carrito {
 			}
 			
 	public void listarItems (){
-		
+		System.out.printf("\t%-2s\t%-30s\t%-3s\t%-10s\t%s\n\n\n", "ID", "Descripcion", "Can", "Precio", "SubTot");  
+
 		for (Item item : this.items){
-		System.out.printf("\t%3d\t%-10s\t%3d\t$%7.2f %7.2f\n", item.getProducto().getId(), item.getProducto().getNombre(), item.getCantidad(), item.getProducto().getPrecio(), item.getCantidad()*item.getProducto().getPrecio());  
+		System.out.printf("\t%3d\t%-10s\t%3d\t$%7.2f\t$%7.2f\n", item.getProducto().getId(), item.getProducto().getNombre(), item.getCantidad(), item.getProducto().getPrecio(), item.getCantidad()*item.getProducto().getPrecio());  
 	   }
 	}
 	
