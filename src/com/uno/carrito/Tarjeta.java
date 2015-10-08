@@ -1,6 +1,5 @@
 package com.uno.carrito;
 
-import java.util.Date;
 
 public class Tarjeta {
 	

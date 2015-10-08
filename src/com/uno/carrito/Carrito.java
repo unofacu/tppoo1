@@ -29,6 +29,27 @@ public class Carrito {
 		}
 			
 	}
+			
+	public void borrarProducto (int id) {
+	
+		boolean encontre = false;
+		for (int i = 0; i < this.items.size() && !encontre; i++) {
+					
+			Item item = this.items.get(i);
+			if (item.getProducto().getId() == id) {
+				items.remove(i);
+				encontre = true;
+					}
+				}
+			}
+			
+	public void listarItems (){
+		
+		for (Item item : this.items){
+		System.out.printf("\t%3d\t%-10s\t%3d\t$%7.2f %7.2f\n", item.getProducto().getId(), item.getProducto().getNombre(), item.getCantidad(), item.getProducto().getPrecio(), item.getCantidad()*item.getProducto().getPrecio());  
+	   }
+	}
+	
 	
 	public float getTotal() {
 		

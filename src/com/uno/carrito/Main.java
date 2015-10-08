@@ -13,14 +13,12 @@ public class Main {
 		String dirdeenvio = "NULL";
 		String dirdecobro = "NULL";
 		String mail = "NULL";
-		String dec = "NULL";
 		long nroTarjeta = 0;
 		String validoDesde = "";
 		String validoHasta = "";
 		int cvs = 0;
 		int descuento = 0;
-		Carrito carrito;
-
+		
 		// Carrito carrito2 = new Carrito();
 		// Carrito carrito3 = new Carrito();
 		//
@@ -66,7 +64,7 @@ public class Main {
 		Scanner keyboard = new Scanner(System.in);
 		int opcion = 0;
 
-		while (!(opcion == 8)) {
+		while (!(opcion == 9)) {
 
 			System.out.println("1.-Ingresar cliente");
 			System.out.println("2.-Agregar Carrito al cliente.");
@@ -74,8 +72,9 @@ public class Main {
 			System.out.println("4.-Seleccionar Carrito");
 			System.out.println("5.-Listar productos");
 			System.out.println("6.-Agregar producto al carrito");
-			System.out.println("7.-Comprar");
-			System.out.println("8.-Salir");
+			System.out.println("7.-Borrar producto del carrito");
+			System.out.println("8.-Comprar");
+			System.out.println("9.-Salir");
 			System.out.println("");
 			System.out.print("Ingrese una opcion: ");
 			opcion = keyboard.nextInt();
@@ -83,13 +82,13 @@ public class Main {
 			switch (opcion) {
 			case 1:
 
-				System.out.println("Ingrse el nomrbre del cliente: ");
+				System.out.print("Ingrse el nomrbre del cliente: ");
 				nombre = keyboard.next();
-				System.out.println("Ingrese la direccion de Envio: ");
+				System.out.print("Ingrese la direccion de Envio: ");
 				dirdeenvio = keyboard.next();
-				System.out.println("Ingrese la direccion de Cobro: ");
+				System.out.print("Ingrese la direccion de Cobro: ");
 				dirdecobro = keyboard.next();
-				System.out.println("Ingrese el mail del cliente: ");
+				System.out.print("Ingrese el mail del cliente: ");
 				mail = keyboard.next();
 
 				// Solicitar datos de Tarjeta
@@ -149,9 +148,19 @@ public class Main {
 
 				break;
 			case 7:
-				cliente.mostrarDetalle();
+				System.out.print(" \n\n\n");
+				cliente.getCarrito(carritoActual).listarItems();
+				System.out.print(" \n\n\nSelecciones el ID del producto a borrar del carrito: ");
+				id = keyboard.nextInt();
+				cliente.getCarrito(carritoActual).borrarProducto(id);
+				System.out.printf("Su producto ha sido borrado del carrito Nro: %d\n", carritoActual);
+				System.out.println(" presione enter para continuar...");
+				System.in.read();
 				break;
 			case 8:
+				cliente.mostrarDetalle();
+				break;
+			case 9:
 				System.out.println("Saliendo del programa!!!");
 				break;
 			default:
