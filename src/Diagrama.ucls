@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.1.8" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true">  
+<class-diagram version="1.1.8" icons="true" automaticImage="GIF" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
   <class id="1" language="java" name="com.uno.carrito.Carrito" project="tppoo1" 
     file="/tppoo1/src/com/uno/carrito/Carrito.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="195" x="421" y="564"/>    
+    <position height="171" width="195" x="587" y="518"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="com.uno.carrito.ProductosAComprar" project="tppoo1" 
     file="/tppoo1/src/com/uno/carrito/ProductosAComprar.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="189" x="414" y="739"/>    
+    <position height="135" width="189" x="358" y="873"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,95 +21,113 @@
   </class>  
   <class id="3" language="java" name="com.uno.carrito.Main" project="tppoo1" 
     file="/tppoo1/src/com/uno/carrito/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="113" x="414" y="83"/>    
+    <position height="99" width="113" x="137" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="com.uno.carrito.Item" project="tppoo1" 
+  <class id="4" language="java" name="com.uno.carrito.Tarjeta" project="tppoo1" 
+    file="/tppoo1/src/com/uno/carrito/Tarjeta.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="162" x="385" y="518"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.uno.carrito.Item" project="tppoo1" 
     file="/tppoo1/src/com/uno/carrito/Item.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="189" width="158" x="643" y="739"/>    
+    <position height="189" width="158" x="587" y="873"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="com.uno.carrito.Cliente" project="tppoo1" 
+  <class id="6" language="java" name="com.uno.carrito.Cliente" project="tppoo1" 
     file="/tppoo1/src/com/uno/carrito/Cliente.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="441" width="187" x="567" y="83"/>    
+    <position height="441" width="222" x="385" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.uno.carrito.Producto" project="tppoo1" 
+  <class id="7" language="java" name="com.uno.carrito.Producto" project="tppoo1" 
     file="/tppoo1/src/com/uno/carrito/Producto.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="143" x="414" y="968"/>    
+    <position height="243" width="143" x="358" y="1102"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="com.uno.carrito.ClientePreferencial" project="tppoo1" 
+  <class id="8" language="java" name="com.uno.carrito.ClientePreferencial" project="tppoo1" 
     file="/tppoo1/src/com/uno/carrito/ClientePreferencial.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="269" x="656" y="564"/>    
+    <position height="117" width="304" x="41" y="518"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="8">    
-    <bendpoint x="560" y="911"/>    
+  <generalization id="9">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <association id="10">    
+    <bendpoint x="360" y="1015"/>    
+    <bendpoint x="352" y="1058"/>    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="9" name="prodtemporal"/>      
-      <multiplicity id="10" minimum="0" maximum="1"/>    
+      <attribute id="11" name="prodtemporal"/>      
+      <multiplicity id="12" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="11">    
+  <association id="13">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="12" name="carritos"/>      
-      <multiplicity id="13" minimum="0" maximum="2147483647"/>    
+      <attribute id="14" name="producto"/>      
+      <multiplicity id="15" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="14">    
+  <association id="16">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="15" name="items"/>      
-      <multiplicity id="16" minimum="0" maximum="2147483647"/>    
+      <attribute id="17" name="items"/>      
+      <multiplicity id="18" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="19">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="20" name="tarjeta"/>      
+      <multiplicity id="21" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="17">    
-    <bendpoint x="436" y="914"/>    
+  <association id="22">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="23" name="carritos"/>      
+      <multiplicity id="24" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="25">    
+    <bendpoint x="488" y="1035"/>    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="18" name="listaProductos"/>      
-      <multiplicity id="19" minimum="0" maximum="2147483647"/>    
+      <attribute id="26" name="listaProductos"/>      
+      <multiplicity id="27" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="20">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="21" name="producto"/>      
-      <multiplicity id="22" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="23">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

@@ -11,9 +11,9 @@ public class ClientePreferencial extends Cliente{
 	}
 
 	@Override
-	public float getTotalAPagar() {
+	public float getTotalAPagar(int nroCarrito) {
 		// TODO Auto-generated method stub
-		return this.getTotalCompra()- ((this.getTotalCompra()*descuento)/100);
+		return this.getTotalCompra(nroCarrito)- ((this.getTotalCompra(nroCarrito)*descuento)/100);
 	}
 
 

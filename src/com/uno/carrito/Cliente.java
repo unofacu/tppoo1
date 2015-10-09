@@ -84,39 +84,46 @@ public class Cliente {
 		
 	}
 
-	public float getTotalCompra() {
+	public float getTotalCompra(int nroCarrito) {
 		
-		float totalCompra = 0;
-		for (Carrito carrito : this.carritos)
-			totalCompra += carrito.getTotal();
+//		float totalCompra = 0;
+//		for (Carrito carrito : this.carritos)
+//			totalCompra += carrito.getTotal();
 		
-		return totalCompra;
+//		return totalCompra;
 		
-	}
-	
-	public void comprar() {
-		
-		float total = this.getTotalCompra();
-		System.out.printf("Datos Cliente:\n%s\n%s\n%s\n%s\n", nombre, direccionCobro, direccionEnvio, email);
+		return this.carritos.get(nroCarrito).getTotal();
 		
 	}
 	
-	public float getTotalAPagar(){
-		return this.getTotalCompra();
+	public void comprar(int nroCarrito, int cvs) {
+
+		if (this.tarjeta.validar(cvs)) {
+			float total = this.getTotalCompra(nroCarrito);
+			System.out.printf("Compra realizada\n\nDatos Cliente:\n%s\n%s\n%s\n%s\n", nombre, direccionCobro, direccionEnvio, email);
+		} else {
+			System.out.println("Problemas al validar la tarjeta. Rentente.");
+		}
+		
+	}
+	
+	public float getTotalAPagar(int nroCarrito){
+		return this.getTotalCompra(nroCarrito);
 		
 	}
 		
-	public void mostrarDetalle() {
-		for(Carrito carrito : this.carritos)
-			carrito.mostrarDetalle();
+	public void mostrarDetalle(int id) {
+		
+		getCarrito(id).mostrarDetalle();
 				
-		System.out.printf("Total a pagar: %f\n", this.getTotalAPagar());
+		System.out.printf("\t                                 Total a pagar: $%7.2f\n\n", this.getTotalAPagar(id));
 	}
 	
 	public void ListarCarritos (){
-		System.out.printf("\n\n\nUsted dispone de los siguientes carritos:\n\n\n");
+		System.out.printf("\n\n\nCarritos del cliente %s :\n\n", this.nombre);
+		System.out.printf("%-3s\t%-11s\n\n", "Id", "Total");
 		for (int i = 0; i < this.carritos.size(); i++){
-			System.out.printf("Carrito Nro: %d\n", i); 
+			System.out.printf("%3d\t$%7.2f\n", i, this.carritos.get(i).getTotal());
 		 }
 		System.out.printf("\n\n\n");
 	}

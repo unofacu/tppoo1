@@ -22,6 +22,8 @@ public class Main {
 		int carritoActual = 0;
 		Scanner keyboard = new Scanner(System.in);
 		int opcion = 0;
+		Tarjeta tarjeta = null ;
+		String confirmar = "";
 
 		while (!(opcion == 9)) {
 
@@ -60,7 +62,7 @@ public class Main {
 				System.out.print("Ingrese codigo de verificacion: ");
 				cvs = keyboard.nextInt();
 
-				Tarjeta tarjeta = new Tarjeta(nroTarjeta, validoDesde, validoHasta, cvs);
+				tarjeta = new Tarjeta(nroTarjeta, validoDesde, validoHasta, cvs);
 				System.out.print("Ingrese el procentaje de descuento: ");
 				descuento = keyboard.nextInt();
 
@@ -117,7 +119,24 @@ public class Main {
 				System.in.read();
 				break;
 			case 8:
-				cliente.mostrarDetalle();
+				
+				int idcarrito = 0;
+				cvs = 0;
+				System.out.print("Ingrese el ID del carrito a comprar: ");
+				idcarrito = keyboard.nextInt();
+				
+				System.out.print("reingrese el codigo de validacion de la tarjea: ");
+				cvs = keyboard.nextInt();
+				
+				cliente.mostrarDetalle(idcarrito);
+				
+				System.out.print("Confirma la compra (S/N);");
+				confirmar = keyboard.next();
+				if (confirmar.equals("S")) {
+					cliente.comprar(idcarrito, cvs);
+					cliente = null;
+				}
+				
 				break;
 			case 9:
 				System.out.println("Saliendo del programa!!!");
